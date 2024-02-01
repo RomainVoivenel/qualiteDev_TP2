@@ -1,41 +1,51 @@
 import java.util.Map;
 import java.util.HashMap;
-
 public class Auteur{
     private String nom;
-    Map<String, Integer> perfTragedie;
-    Map<String, Integer> perfComedie;
-    Map<String, Integer> perfDrame;
+    Map<String, Integer> performance;
+
 
     public Auteur(String nom, int qualiteTragedie, String citationTragedie, int qualiteComedie, String citationComedie, int qualiteDrame, String citationDrame){
         this.nom = nom;
-        this.perfTragedie = new HashMap<>();
-        this.perfComedie = new HashMap<>();
-        this.perfDrame = new HashMap<>();
-        this.perfTragedie.put(citationTragedie,qualiteTragedie);
-        this.perfComedie.put(citationComedie,qualiteComedie);
-        this.perfDrame.put(citationDrame,qualiteDrame);
+        this.performance = new HashMap<>();
+        this.performance.put(citationTragedie,qualiteTragedie);
+        this.performance.put(citationComedie,qualiteComedie);
+        this.performance.put(citationDrame,qualiteDrame);
 
     }
+
     public int getQualiteTragedie(String citationTragedie){
-        return this.perfTragedie.get(citationTragedie);
+        return this.performance.get(citationTragedie);
     }
     public String getCitationTragedie(){
-        return this.perfTragedie.keySet()[0];
+        Set<String> keys = performance.keySet();
+        keys[0];
     }
 
     public int getQualiteComedie(String citationComedie){
-        return this.perfComedie.get(citationComedie);
+        return this.performance.get(citationComedie);
     }
     public String getCitationComedie(){
-        return this.perfComedie.keySet()[0];
+        Set<String> keys = performance.keySet();
+        keys[1];
     }
 
     public int getQualiteDrame(String citationDrame){
-        return this.perfDrame.get(citationDrame);
+        return this.performance.get(citationDrame);
     }
     public String getCitationDrame(){
-        return this.perfDrame.keySet()[0];
+        Set<String> keys = performance.keySet();
+        keys[2];
+    }
+
+    public String getMeilleurStyle(){
+        int res = getQualiteTragedie(getCitationTragedie());
+        if (getQualiteComedie(getCitationComedie()) > res){
+            res = getQualiteComedie(getCitationComedie());
+        }
+        if (getQualiteDrame(getCitationDrame()) > res) {
+            res = getQualiteDrame(getCitationDrame());
+        }
     }
 
     @Override
