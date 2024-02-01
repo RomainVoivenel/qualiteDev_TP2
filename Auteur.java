@@ -20,6 +20,24 @@ public class Auteur{
     public int getQualiteTragedie(String citationTragedie){
         return this.perfTragedie.get(citationTragedie);
     }
+    public String getCitationTragedie(){
+        return this.perfTragedie.keySet()[0];
+    }
+
+    public int getQualiteComedie(String citationComedie){
+        return this.perfComedie.get(citationComedie);
+    }
+    public String getCitationComedie(){
+        return this.perfComedie.keySet()[0];
+    }
+
+    public int getQualiteDrame(String citationDrame){
+        return this.perfDrame.get(citationDrame);
+    }
+    public String getCitationDrame(){
+        return this.perfDrame.keySet()[0];
+    }
+
     @Override
     public String toString(){
         String s1 = "L'honorable ";
