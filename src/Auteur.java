@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Map.Entry;
 public class Auteur{
     private String nom;
     Map<String, Performance> performance;
@@ -36,11 +37,12 @@ public class Auteur{
     public String pointFort(){
         int qualite = 0;
         String fortEn = "Tragédie";
-        for (Map<String, Performance> performances : this.performance){
-            if (){
-
+        for (Entry<String, Performance> performances : this.performance.entrySet()){
+            if (this.performance.get(performances.getKey()).getPerf() > qualite){
+                fortEn = performances.getKey();
             }
         }
+        return fortEn;
     }
 
     @Override
