@@ -2,42 +2,42 @@ import java.util.*;
 import java.util.Map.Entry;
 public class Auteur{
     private String nom;
-    Map<String, Performance> performance;
+    Map<Style, Performance> performance;
 
 
     public Auteur(String nom, int qualiteTragedie, String citationTragedie, int qualiteComedie, String citationComedie, int qualiteDrame, String citationDrame){
         this.nom = nom;
         this.performance = new HashMap<>();
-        this.performance.put("Tragédie",new Performance(citationTragedie,qualiteTragedie));
-        this.performance.put("Comédie",new Performance(citationComedie,qualiteComedie));
-        this.performance.put("Drame",new Performance(citationDrame,qualiteDrame));
+        this.performance.put(Style.TRAGEDIE,new Performance(citationTragedie,qualiteTragedie));
+        this.performance.put(Style.COMEDIE,new Performance(citationComedie,qualiteComedie));
+        this.performance.put(Style.DRAME,new Performance(citationDrame,qualiteDrame));
     }
 
     public int getQualiteTragedie(){
-        return this.performance.get("Tragédie").getPerf();
+        return this.performance.get(Style.TRAGEDIE).getPerf();
     }
     public String getCitationTragedie(){
-        return this.performance.get("Tragédie").getCitation();
+        return this.performance.get(Style.TRAGEDIE).getCitation();
     }
 
     public int getQualiteComedie(){
-        return this.performance.get("Comédie").getPerf();
+        return this.performance.get(Style.COMEDIE).getPerf();
     }
     public String getCitationComedie(){
-        return this.performance.get("Comédie").getCitation();
+        return this.performance.get(Style.COMEDIE).getCitation();
     }
 
     public int getQualiteDrame(){
-        return this.performance.get("Drame").getPerf();
+        return this.performance.get(Style.DRAME).getPerf();
     }
     public String getCitationDrame(){
-        return this.performance.get("Drame").getCitation();
+        return this.performance.get(Style.DRAME).getCitation();
     }
 
-    public String pointFort(){
+    public Style pointFort(){
         int qualite = 0;
-        String fortEn = "Tragédie";
-        for (Entry<String, Performance> performances : this.performance.entrySet()){
+        Style fortEn = Style.TRAGEDIE;
+        for (Entry<Style, Performance> performances : this.performance.entrySet()){
             if (this.performance.get(performances.getKey()).getPerf() > qualite){
                 fortEn = performances.getKey();
             }
