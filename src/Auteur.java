@@ -45,6 +45,10 @@ public class Auteur{
         return fortEn;
     }
 
+    public int qualiteStyle(Style s){
+        return this.performance.get(s).getPerf();
+    }
+
     @Override
     public String toString(){
         String s1 = "L'honorable ";
