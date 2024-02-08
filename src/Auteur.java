@@ -49,6 +49,10 @@ public class Auteur{
         return this.performance.get(s).getPerf();
     }
 
+    public String citationStyle(Style s){
+        return this.performance.get(s).getCitation();
+    }
+
     @Override
     public String toString(){
         String s1 = "L'honorable ";
