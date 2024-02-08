@@ -12,22 +12,22 @@ public class Auteur{
         this.performance.put("Drame",new Performance(citationDrame,qualiteDrame));
     }
 
-    public int getQualiteTragedie(Performance performance){
-        return this.performance.get(performance).getPerf();
+    public int getQualiteTragedie(){
+        return this.performance.get("Tragédie").getPerf();
     }
     public String getCitationTragedie(){
         return this.performance.get("Tragédie").getCitation();
     }
 
-    public int getQualiteComedie(Performance performance){
-        return this.performance.get(performance).getPerf();
+    public int getQualiteComedie(){
+        return this.performance.get("Comédie").getPerf();
     }
     public String getCitationComedie(){
         return this.performance.get("Comédie").getCitation();
     }
 
-    public int getQualiteDrame(Performance performance){
-        return this.performance.get(performance).getPerf();
+    public int getQualiteDrame(){
+        return this.performance.get("Drame").getPerf();
     }
     public String getCitationDrame(){
         return this.performance.get("Drame").getCitation();
@@ -37,7 +37,7 @@ public class Auteur{
         int qualite = 0;
         String fortEn = "Tragédie";
         for (Map<String, Performance> performances : this.performance){
-            if (performances.){
+            if (){
 
             }
         }
