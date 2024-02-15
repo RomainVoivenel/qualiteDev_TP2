@@ -3,12 +3,13 @@ public class Epreuve {
     private Journee momentJournee;
     private int nbSpectateur;
 
-    public Epreuve(Style style, Journee momentJournee) {
+    public Epreuve(Style style, Journee momentJournee, int nbSpectateur) {
         this.style = style;
         this.momentJournee = momentJournee;
+        this.nbSpectateur = nbSpectateur;
     }
 
-    public int scoreAuteur(Auteur auteur) {
+    public int scoreAuteur(Auteur auteur, Style style,) {
         return auteur.qualiteStyle(style) * this.nbSpectateur;
     }
 
