@@ -1,6 +1,8 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "src/tournoi.jar"
+        "src/tournoi.jar",
+        "/home/iut45/Etudiants/o22300839/local/tp2/junit-4.13.2.jar",
+        "/home/iut45/Etudiants/o22300839/local/tp2/hamcrest-2.2.jar"
     ]
 }
