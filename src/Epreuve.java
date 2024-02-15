@@ -13,11 +13,11 @@ public class Epreuve {
         return auteur.qualiteStyle(style) * this.nbSpectateur;
     }
 
-    public Auteur combat(Auteur auteur1, Auteur auteur2) {
+    public boolean combat(Auteur auteur1, Auteur auteur2) {
         if (this.scoreAuteur(auteur1, this.style) > this.scoreAuteur(auteur2, this.style)) {
-            return auteur1;
+            return true;
         }
-        return auteur2;
+        return false;
     }
 
     @Override

@@ -1,3 +1,4 @@
+import dionysies.Tournoi;
 class Main {
     public static void main(String[] args) {
         String citation_antigone = "C'est ainsi que j'irai reposer près de lui, chère à qui m'est cher, saintement"
@@ -64,5 +65,15 @@ class Main {
                 5, citation_thesmophories,
                 100, citation_guêpes,
                 0, "");
+        
+        Tournoi dionisies = new Tournoi("Dionisies");
+        dionisies.inscrire(sophocle);
+        dionisies.inscrire(euripide);
+        dionisies.inscrire(aristophane);
+        dionisies.afficheParticipants();
+        dionisies.débute();
+        Epreuve epreuve1 = new Epreuve(Style.COMEDIE, Journee.MATIN, 604);
+        boolean resEpreuve1 = epreuve1.combat(euripide, aristophane);
+        dionisies.enregistreRésultatJournée(resEpreuve1);
     }
 }
