@@ -9,12 +9,12 @@ public class Epreuve {
         this.nbSpectateur = nbSpectateur;
     }
 
-    public int scoreAuteur(Auteur auteur, Style style,) {
+    public int scoreAuteur(Auteur auteur, Style style) {
         return auteur.qualiteStyle(style) * this.nbSpectateur;
     }
 
     public Auteur combat(Auteur auteur1, Auteur auteur2) {
-        if (this.scoreAuteur(auteur1) > this.scoreAuteur(auteur2)) {
+        if (this.scoreAuteur(auteur1, this.style) > this.scoreAuteur(auteur2, this.style)) {
             return auteur1;
         }
         return auteur2;

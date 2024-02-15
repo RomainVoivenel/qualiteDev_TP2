@@ -14,8 +14,8 @@ public class TournoiJournee {
         this.participants.add(auteur);
     }
 
-    public void ajoutEpreuve(Style style, Journee momentJournee) {
-        this.epreuves.add(new Epreuve(style, momentJournee));
+    public void ajoutEpreuve(Style style, Journee momentJournee, int nbSpectateur) {
+        this.epreuves.add(new Epreuve(style, momentJournee, nbSpectateur));
     }
 
     public int totalScore(Auteur auteur) {
